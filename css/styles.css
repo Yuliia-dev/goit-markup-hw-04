@@ -101,7 +101,7 @@ img {
 
 .menu-link,
 .hookup-link {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -112,26 +112,24 @@ img {
   letter-spacing: 0.02em;
   color: var(--secondary-color);
 }
+.hookup-link {
+  font-style: normal;
+
+  color: var(--text-color);
+  fill: var(--text-color);
+}
 .menu-link:hover,
 .menu-link:focus,
 .hookup-link:hover,
 .hookup-link:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
-.hookup-link {
-  font-style: normal;
-  color: var(--text-color);
-}
+
 .hookup-icon {
+  display: flex;
   font-style: inherit;
   margin-right: 10px;
-  justify-content: center;
-  align-items: center;
-  fill: var(--text-color);
-}
-.hookup-icon:hover,
-.hookup-icon:focus {
-  fill: var(--accent-color);
 }
 
 .logo,
@@ -158,6 +156,9 @@ img {
   padding-bottom: 200px;
   text-align: center;
 
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
   background-color: var(--hero-color);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/img-background.jpg');
@@ -189,16 +190,21 @@ img {
   line-height: 1.87;
   align-items: center;
   letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
   color: var(--title-color);
   background: var(--accent-color);
 }
 
 /* Specifics */
+
 .container-icon {
+  display: flex;
   width: 270px;
   height: 120px;
   margin-bottom: 30px;
-  padding: 25px 100px;
+  justify-content: center;
+  align-items: center;
   background: var(--team-section-color);
 }
 
@@ -265,7 +271,7 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 .person {
-  padding: 30px 55px;
+  padding: 30px 30px;
 }
 .team-name {
   margin-bottom: 10px;
@@ -318,18 +324,20 @@ img {
   align-items: center;
 }
 .company-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 90px;
-  padding: 16px 32px;
   cursor: pointer;
+  border-radius: 4px;
   fill: var(--icon-color);
-  outline: 2px solid var(--icon-color);
+  border: 1px solid var(--icon-color);
 }
 .company-link:hover,
 .company-link:focus {
   fill: var(--accent-color);
-  outline: 2px solid var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 .company-item:not(:last-child) {
@@ -404,10 +412,10 @@ img {
 }
 .general {
   display: flex;
+  align-items: baseline;
 }
 .footer-container:not(:first-child) {
   margin-left: 70px;
-  margin-top: 10px;
 }
 
 /* Portfolio page */
@@ -448,6 +456,7 @@ img {
 .filter-btn:focus {
   color: var(--title-color);
   background-color: var(--accent-color);
+  box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 /* Client */
@@ -488,4 +497,11 @@ img {
   font-size: 16px;
   line-height: 1.87;
   color: var(--text-color);
+}
+.client-link {
+  display: block;
+}
+.client-link:hover,
+.client-link:focus {
+  box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
